@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Harishma's AI & Automation Portfolio - Exploring LLMs, AI, and Intelligent Systems">
+  <meta name="author" content="Harishma Manikandan">
+  <title>Harishma | AI & Automation Portfolio</title>
+  <style>
+    :root { color-scheme: dark; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #020617, #0f172a 55%, #1e3a8a);
+      color: #f8fafc;
+      line-height: 1.7;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: rgba(2, 6, 23, 0.9);
+      border-bottom: 1px solid rgba(125, 211, 252, 0.3);
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(8px);
+    }
+    nav ul { display: flex; gap: 1rem; list-style: none; padding: 0; margin: 0; }
+    a { color: #bae6fd; text-decoration: none; transition: color 0.3s; }
+    a:hover { color: #38bdf8; }
+    section { padding: 3rem 2rem; max-width: 1050px; margin: 0 auto; }
+    .hero { padding-top: 4rem; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    .hero h2 { color: #7dd3fc; font-weight: 600; }
+    .button-group { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.2rem; }
+    .button {
+      display: inline-block;
+      padding: 0.8rem 1.2rem;
+      background: #38bdf8;
+      color: #082f49;
+      border-radius: 999px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .button:hover { background: #7dd3fc; }
+    .section-title { font-size: 1.7rem; margin-bottom: 0.7rem; color: #f8fafc; }
+    .skills, .links { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+    .skills span, .link-card {
+      background: rgba(56, 189, 248, 0.16);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      padding: 0.6rem 0.9rem;
+      border-radius: 999px;
+      animation: fadeIn 0.5s ease-in;
+    }
+    .project-grid, .article-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .project-card, .article-card {
+      background: rgba(15, 23, 42, 0.92);
+      padding: 1.25rem;
+      border-radius: 14px;
+      border: 1px solid rgba(125, 211, 252, 0.25);
+      box-shadow: 0 10px 25px rgba(2, 6, 23, 0.25);
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: slideUp 0.5s ease-out;
+    }
+    .project-card:hover, .article-card:hover { 
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(56, 189, 248, 0.2);
+    }
+    .project-card ul { padding-left: 1.1rem; margin: 0.4rem 0 0; }
+    .project-card li { margin-bottom: 0.4rem; }
+    .contact-card { background: rgba(15, 23, 42, 0.92); padding: 1.35rem; border-radius: 14px; border: 1px solid rgba(125, 211, 252, 0.25); }
+    footer { text-align: center; padding: 1.5rem 1rem 2rem; color: #94a3b8; }
+    
+    /* Loading indicator */
+    .loading { color: #7dd3fc; font-style: italic; }
+    
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Form styles */
+    input, textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border-radius: 8px;
+      border: 1px solid #7dd3fc;
+      background: rgba(15, 23, 42, 0.9);
+      color: #f8fafc;
+      font-family: Arial, sans-serif;
+      box-sizing: border-box;
+    }
+    input::placeholder, textarea::placeholder { color: #94a3b8; }
+    button[type="submit"] {
+      width: 100%;
+      padding: 0.8rem;
+      background: #38bdf8;
+      color: #082f49;
+      border: none;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button[type="submit"]:hover { background: #7dd3fc; }
+  </style>
+</head>
+<body>
+  <nav>
+    <h2>Harishma</h2>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#talk">Discuss</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="home" class="hero">
+    <h1>Hello, I'm Harishma 👋</h1>
+    <h2>Engineering graduate • exploring AI, automation, and intelligent systems</h2>
+    <p>I am passionate about building practical AI solutions, understanding how large language models work, and exploring how local intelligence can be shaped for real-world impact.</p>
+    <div class="button-group">
+      <a href="#projects" class="button">View My Work</a>
+      <a href="#talk" class="button">Discuss AI Trends</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <p>I am Harishma, an engineering graduate with a strong interest in technology, problem-solving, and emerging AI systems. My current focus is on understanding how intelligent systems can be designed responsibly, how local models can be optimized for offline use, and how automation can make everyday workflows smarter and more efficient.</p>
+    <p>I am especially interested in the intersection of LLMs, agentic AI, automation, and scalable data-driven solutions. This journey is helping me build both technical depth and practical perspective in the evolving AI landscape.</p>
+  </section>
+
+  <section id="skills">
+    <h2 class="section-title">Skills & Interests</h2>
+    <div class="skills">
+      <span>LLM</span>
+      <span>Agentic AI Solutions</span>
+      <span>Automation</span>
+      <span>Python</span>
+      <span>DBMS</span>
+      <span>Prompt Engineering</span>
+      <span>System Thinking</span>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>JARVIS Assistant (In Progress)</h3>
+        <p>This project focuses on building a local assistant that can run with a local LLM and perform useful tasks offline.</p>
+        <ul>
+          <li>Exploring the capabilities of local language models without depending fully on cloud services.</li>
+          <li>Investigating how local AI can be improved with edge technologies and lightweight deployment strategies.</li>
+          <li>Designing workflows for automation, memory, and intelligent task handling.</li>
+        </ul>
+      </div>
+      <div class="project-card">
+        <h3>Local AI Research</h3>
+        <p>The goal is to understand how smaller and efficient models can be tuned for practical, private, and low-latency applications.</p>
+        <ul>
+          <li>Studying model behavior and reliability in offline environments.</li>
+          <li>Comparing the use of local inference with cloud-connected AI systems.</li>
+          <li>Exploring how AI can be made more adaptable for everyday users and edge devices.</li>
+        </ul>
+      </div>
+      <div class="project-card">
+        <h3>Automation & Intelligent Workflows</h3>
+        <p>I am also interested in building systems that reduce repetitive work and improve decision-making through automation.</p>
+        <ul>
+          <li>Applying Python for automation and data-oriented tasks.</li>
+          <li>Exploring how AI agents can assist with structured and semi-structured workflows.</li>
+          <li>Connecting intelligent systems with practical business and personal use cases.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="talk">
+    <h2 class="section-title">Talk With Me / Discuss With Me</h2>
+    <p>I enjoy discussing large language models, current AI trends, agentic AI, and the future of local intelligence. This space is meant for meaningful conversations around how AI is evolving and how it can be used responsibly.</p>
+    <div class="article-grid">
+      <div class="article-card">
+        <h3>LLMs and the Future of AI</h3>
+        <p>A useful starting point for understanding how language models are shaping modern AI products and experiences.</p>
+        <a href="https://openai.com/index/introducing-chatgpt" target="_blank">OpenAI Blog</a>
+      </div>
+      <div class="article-card">
+        <h3>Agentic AI Concepts</h3>
+        <p>Explore how AI systems are increasingly being designed to plan, act, and collaborate across tasks.</p>
+        <a href="https://huggingface.co/blog" target="_blank">Hugging Face Blog</a>
+      </div>
+      <div class="article-card">
+        <h3>AI Trends and Research</h3>
+        <p>Useful for staying informed about the latest breakthroughs, model releases, and industry developments.</p>
+        <a href="https://ai.googleblog.com/" target="_blank">Google AI Blog</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-card">
+      <p><strong>Email:</strong> harishmamanik16@gmail.com</p>
+      <p>I am always open to meaningful conversations about AI, automation, LLMs, and emerging technologies.</p>
+    </div>
+  </section>
+
+  <footer>© 2026 Harishma | Built with a focus on AI, learning, and thoughtful innovation.</footer>
+
+  <!-- Include config and API client -->
+  <script src="config.js"></script>
+  <script src="api.js"></script>
+  <script src="portfolio.js"></script>
+</body>
+</html>

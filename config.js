@@ -1,0 +1,2 @@
+// Frontend environment configuration
+window.API_BASE_URL = window.API_BASE_URL || window.location.origin + '/api';
